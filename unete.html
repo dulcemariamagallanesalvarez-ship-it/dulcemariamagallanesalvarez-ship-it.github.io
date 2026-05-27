@@ -1,0 +1,37 @@
+<main class="container" style="max-width: 600px;">
+        <section class="main-card">
+            <h1 style="margin-bottom: 0.5rem;">Inscríbete a la Iniciativa</h1>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                Sé parte del cambio. Regístrate para colaborar como voluntario en los comités hídricos de UVM Campus Saltillo.
+            </p>
+
+            <form action="#" method="POST" onsubmit="alert('¡Registro exitoso! Nos comunicaremos a tu correo UVM.'); return false;">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Institucional (@uvm.edu.mx):</label>
+                    <input type="email" id="correo" class="form-control" placeholder="nombre.apellido@uvm.edu.mx" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="licenciatura">Carrera / Licenciatura:</label>
+                    <input type="text" id="licenciatura" class="form-control" placeholder="Ej. Ingeniería Industrial" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentario">¿Por qué deseas unirte?</label>
+                    <textarea id="comentario" class="form-control" rows="4" placeholder="Compártenos tus motivaciones e intereses..."></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 0.8rem;">Enviar Solicitud</button>
+            </form>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 Proyecto HidroSustentable. UVM Campus Saltillo.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
