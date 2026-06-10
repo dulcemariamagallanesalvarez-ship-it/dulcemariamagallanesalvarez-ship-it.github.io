@@ -1,45 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. CONTROL DE MENÚ RESPONSIVE DESPLEGABLE
-    const menuToggle = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Menú Responsivo Hamburguesa
+    const menuToggle = document.getElementById("mobile-menu");
+    const navMenu = document.querySelector(".nav-menu");
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
+    if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
         });
     }
 
-    // 2. INICIALIZACIÓN DEL GRÁFICO (Exclusivo en ods.html)
-    const chartCanvas = document.getElementById('odsChart');
-    if (chartCanvas) {
-        new Chart(chartCanvas, {
-            type: 'doughnut',
-            data: {
-                labels: ['Agua Limpia', 'Energía Asequible', 'Vida Submarina', 'Acción por el Clima', 'Otros Objetivos'],
-                datasets: [{
-                    label: 'Distribución de Prioridades',
-                    data: [35, 20, 15, 20, 10],
-                    backgroundColor: [
-                        '#2596be', // Agua Limpia
-                        '#e28743', // Energía
-                        '#063970', // Vida Submarina
-                        '#76b5c5', // Acción por el Clima
-                        '#abd6dfff' // Otros
-                    ],
-                    borderWidth: 2,
-                    borderColor: '#ffffff'
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: { font: { family: 'Segoe UI', size: 12 } }
-                    }
-                }
-            }
-        });
+    // 2. Generación del Gráfico en ods.html (Simulando librería con Canvas Nativo)
+    const canvas = document.getElementById("graficoODS");
+    if (canvas) {
+        const ctx = canvas.getContext("2d");
+        
+        // Datos de ejemplo: Concientización ecológica antes y después
+        const meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun"];
+        const impacto = [20, 35, 45, 60, 75, 90]; // Porcentaje de participación
+
+        ctx.fillStyle = "#2e7d32";
+        
+        // Dibujo de barras simple
+        for (let i = 0; i < impacto.length; i++) {
+            let h = impacto[i] * 2; // Escalar altura
+            let x = i * 60 + 50;
+            let y = 250 - h;
+            
+            // Dibujar Barra
+            ctx.fillRect(x, y, 40, h);
+            
+            // Texto de porcentaje
+            ctx.fillStyle = "#333";
+            ctx.fillText(impacto[i] + "%", x + 10, y - 5);
+            // Texto de mes
+            ctx.fillText(meses[i], x + 10, 270);
+            ctx.fillStyle = "#2e7d32";
+        }
     }
 });
