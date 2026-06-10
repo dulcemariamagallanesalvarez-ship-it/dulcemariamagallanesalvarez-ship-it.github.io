@@ -1,44 +1,64 @@
-<main class="container">
-        <section class="main-card">
-            <h1>Calendario de Actividades del Proyecto</h1>
-            <p style="color: var(--text-muted);">Cronograma semestral de talleres y conferencias sobre sustentabilidad.</p>
-
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Evento / Actividad</th>
-                            <th>Ubicación / Espacio</th>
-                            <th>Estatus</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: 600;">08 de Junio, 2026</td>
-                            <td>Taller de Captación Pluvial y Huertos Urbanos</td>
-                            <td>Explanada Central Campus Saltillo</td>
-                            <td><span style="color: green; font-weight: 600;">Abierto</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 600;">15 de Junio, 2026</td>
-                            <td>Foro Estudiantil: Retos Hídricos en Coahuila</td>
-                            <td>Auditorio Ejecutivo UVM</td>
-                            <td><span style="color: green; font-weight: 600;">Abierto</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 600;">22 de Junio, 2026</td>
-                            <td>Brigada de Limpieza y Reparación de Grifos</td>
-                            <td>Instalaciones Generales del Campus</td>
-                            <td><span style="color: var(--text-muted);">Por abrir</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calendario oficial de actividades ecológicas y comunitarias de Campus Saltillo.">
+    <title>Calendario de Eventos</title>
+    <link rel="stylesheet" href="mi_estilo.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Cuida el Medio Ambiente</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span><span></span><span></span>
             </div>
-        </section>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ods.html">ODS</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="unete.html">Únete</a></li>
+                <li><a href="eventos.html" class="active">Eventos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Calendario de Actividades</h1>
+        <p>Mantente al tanto de los días, horarios y lugares de nuestras próximas intervenciones ecológicas.</p>
+        
+        <table class="tabla-eventos">
+            <thead>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Fecha</th>
+                    <th>Lugar / Punto de Encuentro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Campaña comunitaria de recolección</strong></td>
+                    <td>15 de Junio, 2026</td>
+                    <td>Esplanada Principal, UVM Campus Saltillo</td>
+                </tr>
+                <tr>
+                    <td>Taller de Separación de Residuos Sólidos</td>
+                    <td>22 de Junio, 2026</td>
+                    <td>Auditorio Edificio B</td>
+                </tr>
+                <tr>
+                    <td>Conferencia ODS 13: Acción por el Clima</td>
+                    <td>05 de Julio, 2026</td>
+                    <td>Sesión Virtual (Teams)</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
-    <footer><p>&copy; 2026 Proyecto HidroSustentable. UVM Campus Saltillo.</p></footer>
+    <footer>
+        <p>&copy; 2026 Cuida el Medio Ambiente - UVM Campus Saltillo.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
